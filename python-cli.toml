@@ -106,33 +106,33 @@ doctests = true
 exclude = ".git, __pycache__, .tox, .eggs, *.egg, .venv"
 ignore = "E402, W503"
 max-line-length = 79
-select = C, E, F, W, B, B902, B903, SIM9, PIE
+select = "C, E, F, W, B, B902, B903, SIM9, PIE"
 
-[".editorconfig".*]
-charset = utf-8
-end_of_line = lf
+[".editorconfig"."*"]
+charset = "utf-8"
+end_of_line = "lf"
 indent_size = 4
-indent_style = space
+indent_style = "space"
 insert_final_newline = true
 
-[".editorconfig".*.py]
+[".editorconfig"."*.py"]
 balanced_wrapping = true
 max_line_length = 79
-not_skip = __init__.py
-quote_type = double
-skip = build,.tox,.venv
+not_skip = "__init__.py"
+quote_type = "double"
+skip = "build,.tox,.venv"
 trim_trailing_whitespace = true
 
-[".editorconfig".*.{yml,yaml}]
+[".editorconfig"."*.{yml,yaml}"]
 indent_size = 2
 
 [".editorconfig".LICENSE]
-insert_final_newline = unset
+insert_final_newline = "unset"
 
 [".coveragerc".run]
 branch = true
-concurrency = multiprocessing
-omit = tests/*
+concurrency = "multiprocessing"
+omit = "tests/*"
 parallel = true
 sigterm = true
 
