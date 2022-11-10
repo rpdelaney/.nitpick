@@ -15,7 +15,7 @@ readme = "*"
 repository = "*"
 version = "*"
 
-["pyproject.toml".tool.poetry]
+["pyproject.toml".tool.poetry.dependencies]
 python = "*"
 
 ["pyproject.toml".tool.black]
