@@ -125,14 +125,14 @@ indent_size = 2
 [".editorconfig".LICENSE]
 insert_final_newline = "unset"
 
-# [".coveragerc".run]
-# branch = true
-# concurrency = "multiprocessing"
-# omit = "tests/*"
-# parallel = true
-# sigterm = true
-# 
-# [".coveragerc".report]
-# fail_under = 100
-# show_missing = true
-# skip_empty = true
+[".coveragerc".run]
+branch = true
+concurrency = "multiprocessing"
+omit = "tests/*"
+parallel = true
+sigterm = true
+
+[".coveragerc".report]
+fail_under = 100
+show_missing = true
+skip_empty = true
