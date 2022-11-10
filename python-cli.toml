@@ -1,0 +1,142 @@
+[nitpick.files.present]
+".coveragerc" = "You need a .coveragerc"
+"LICENSE" = "You need a LICENSE"
+"pyproject.toml" = "Install poetry and run 'poetry init' to create it"
+"setup.cfg" = "You need a setup.cfg for flake8"
+
+["pyproject.toml".tool.poetry]
+authors = ["Ryan Delaney <ryan.patrick.delaney+git@protonmail.com>"]
+classifiers = []
+description = "*"
+homepage = "*"
+license = "*"
+name = "*"
+readme = "*"
+repository = "*"
+version = "*"
+
+["pyproject.toml".tool.poetry]
+python = "*"
+
+["pyproject.toml".tool.black]
+line-length = 79
+
+["pyproject.toml".tool.poetry.group.dev.dependencies]
+black = "*"
+flake8 = "*"
+flake8-bugbear = "*"
+flake8-pie = "*"
+flake8-simplify = "*"
+isort = "*"
+mypy = "*"
+pytest = "*"
+
+["pyrpoject.toml".pytest.ini_options]
+console_output_style = "progress"
+filterwarnings = ["error"]
+xfail_strict = true
+
+["pyrpoject.toml".tool.isort]
+color_output = true
+combine_star = true
+extras = [ "pyproject",]
+group_by_package = true
+include_trailing_comma = true  # this prevents isort from fighting with black
+indent = "    "
+length_sort = false
+line_length = 79
+multi_line_output = 3
+remove_redundant_aliases = true
+skip_gitignore = true
+use_parentheses = true
+
+# from default nitpick config, for testing
+combine_as_imports = true
+
+["pyproject.toml".tool.mypy]
+# any
+disallow_any_decorated = true
+disallow_any_explicit = false
+disallow_any_expr = false
+disallow_any_generics = true
+disallow_any_unimported = true
+disallow_subclassing_any = true
+
+# untyped
+allow_untyped_globals = false
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+
+# optionals
+no_implicit_optional = true
+strict_optional = true
+
+# imports
+follow_imports = "normal"
+ignore_missing_imports = false
+
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+strict_equality = true
+
+# error formating
+pretty = true
+show_error_context = true
+show_column_numbers = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ".venv.*"
+ignore_errors = true
+
+["setup.cfg".flake8]
+doctests = true
+exclude = .git, __pycache__, .tox, .eggs, *.egg, .venv
+ignore = "E402, W503"
+max-line-length = 79
+select = C, E, F, W, B, B902, B903, SIM9, PIE
+
+[".editorconfig".*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+[".editorconfig".*.py]
+balanced_wrapping = true
+max_line_length = 79
+not_skip = __init__.py
+quote_type = double
+skip = build,.tox,.venv
+trim_trailing_whitespace = true
+
+[".editorconfig".*.{yml,yaml}]
+indent_size = 2
+
+[".editorconfig".LICENSE]
+insert_final_newline = unset
+
+[".coveragerc".run]
+branch = true
+concurrency = multiprocessing
+omit = tests/*
+parallel = true
+sigterm = true
+
+[".coveragerc".report]
+fail_under = 100
+show_missing = true
+skip_empty = true
