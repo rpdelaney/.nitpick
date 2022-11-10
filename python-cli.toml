@@ -1,6 +1,6 @@
 [nitpick.files.present]
 # ".coveragerc" = "You need a .coveragerc"
-# "LICENSE" = "You need a LICENSE"
+"LICENSE" = "You need a LICENSE"
 "pyproject.toml" = "Install poetry and run 'poetry init' to create it"
 "setup.cfg" = "You need a setup.cfg for flake8"
 
