@@ -1,5 +1,5 @@
 [nitpick.files.present]
-".coveragerc" = "You need a .coveragerc"
+# ".coveragerc" = "You need a .coveragerc"
 "LICENSE" = "You need a LICENSE"
 "pyproject.toml" = "Install poetry and run 'poetry init' to create it"
 "setup.cfg" = "You need a setup.cfg for flake8"
@@ -31,12 +31,12 @@ isort = "*"
 mypy = "*"
 pytest = "*"
 
-["pyrpoject.toml".pytest.ini_options]
+["pyproject.toml".pytest.ini_options]
 console_output_style = "progress"
 filterwarnings = ["error"]
 xfail_strict = true
 
-["pyrpoject.toml".tool.isort]
+["pyproject.toml".tool.isort]
 color_output = true
 combine_star = true
 extras = [ "pyproject",]
