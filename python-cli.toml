@@ -103,7 +103,7 @@ ignore_errors = true
 
 ["setup.cfg".flake8]
 doctests = true
-exclude = .git, __pycache__, .tox, .eggs, *.egg, .venv
+exclude = ".git, __pycache__, .tox, .eggs, *.egg, .venv"
 ignore = "E402, W503"
 max-line-length = 79
 select = C, E, F, W, B, B902, B903, SIM9, PIE
